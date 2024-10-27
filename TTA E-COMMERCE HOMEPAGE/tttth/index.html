@@ -1,0 +1,178 @@
+<style>
+    .encontainer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      height: 500px;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow: hidden; /* Prevents scrolling due to glow */
+    }
+
+    .product-info {
+      flex: 1;
+      max-width: 50%;
+      padding: 20px;
+    }
+
+    .product-info h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .product-info p {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #00ff00;
+      color: #000;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 6px;
+      font-size: 20px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    
+
+    .cta-button:hover {
+      background-color: #00cc00;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .timer-item {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 50%; /* Make it circular */
+      margin: 0 10px;
+      text-align: center;
+      width: 80px; /* Set width for circle */
+      height: 80px; /* Set height for circle */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .timer-item span {
+      display: block;
+      font-size: 24px; /* Adjust font size for visibility */
+      font-weight: 700;
+      color: #00ff00; /* Same color as the button */
+    }
+
+    .timer-item p {
+      font-size: 12px; /* Smaller font for labels */
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .product-image {
+      flex: 1;
+      max-width: 50%;
+      padding: 20px;
+      position: relative; /* Enable positioning for pseudo-element */
+      z-index: 2;
+    }
+
+    .product-image::after {
+      content: '';
+      position: absolute;
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust position to center */
+      width: 200%; /* Make it wider than the image */
+      height: 200%; /* Make it taller than the image */
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* Fading effect */
+      border-radius: 50%; /* Make it oval */
+      filter: blur(40px); /* Blur effect for softness */
+      z-index: -1; /* Place behind the image */
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .product-image,
+      .product-info {
+        max-width: 100%;
+      }
+
+      .product-info h1 {
+        font-size: 36px;
+      }
+
+      .product-info p {
+        font-size: 18px;
+      }
+
+      .cta-button {
+        padding: 14px 35px;
+        font-size: 18px;
+      }
+
+      .timer-item {
+        width: 60px; /* Adjust for smaller screens */
+        height: 60px; /* Adjust for smaller screens */
+        padding: 10px; /* Less padding */
+      }
+
+      .timer-item span {
+        font-size: 20px; /* Adjust font size for smaller screens */
+      }
+
+      .timer-item p {
+        font-size: 10px; /* Adjust label size for smaller screens */
+      }
+    }
+    </style>
+
+
+  <div class="encontainer">
+    <div class="product-info">
+      <h1>Enhance Your Music Experience</h1>
+      <p>Experience the ultimate in sound quality with our top-of-the-line speaker.</p>
+      <a href="#" class="cta-button">Buy Now</a>
+      <div class="timer">
+        <div class="timer-item">
+          <span>23</span>
+          <p>Hours</p>
+        </div>
+        <div class="timer-item">
+          <span>05</span>
+          <p>Days</p>
+        </div>
+        <div class="timer-item">
+          <span>59</span>
+          <p>Minutes</p>
+        </div>
+        <div class="timer-item">
+          <span>35</span>
+          <p>Seconds</p>
+        </div>
+      </div>
+    </div>
+    <div class="product-image">
+      <img src="Frame 694.png" alt="Speaker">
+    </div>
+  </div>
